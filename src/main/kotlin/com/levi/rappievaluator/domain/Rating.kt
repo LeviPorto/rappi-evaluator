@@ -1,8 +1,8 @@
-package com.levi.rappiavaliator.domain
+package com.levi.rappievaluator.domain
 
 import com.datastax.driver.core.utils.UUIDs
-import com.levi.rappiavaliator.domain.enumeration.ImprovementType
-import com.levi.rappiavaliator.domain.enumeration.RangeTime
+import com.levi.rappievaluator.domain.enumeration.ImprovementType
+import com.levi.rappievaluator.domain.enumeration.RangeTime
 import org.springframework.data.cassandra.core.mapping.Column
 import org.springframework.data.cassandra.core.mapping.PrimaryKey
 import org.springframework.data.cassandra.core.mapping.Table

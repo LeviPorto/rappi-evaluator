@@ -1,7 +1,7 @@
-package com.levi.rappiavaliator.service
+package com.levi.rappievaluator.service
 
-import com.levi.rappiavaliator.domain.SuggestedRestaurant
-import com.levi.rappiavaliator.repository.SuggestedRestaurantRepository
+import com.levi.rappievaluator.domain.SuggestedRestaurant
+import com.levi.rappievaluator.repository.SuggestedRestaurantRepository
 import org.springframework.stereotype.Service
 
 @Service

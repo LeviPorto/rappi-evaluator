@@ -1,6 +1,6 @@
-package com.levi.rappiavaliator.repository
+package com.levi.rappievaluator.repository
 
-import com.levi.rappiavaliator.domain.SuggestedRestaurant
+import com.levi.rappievaluator.domain.SuggestedRestaurant
 import org.springframework.data.cassandra.repository.CassandraRepository
 import java.util.*
 

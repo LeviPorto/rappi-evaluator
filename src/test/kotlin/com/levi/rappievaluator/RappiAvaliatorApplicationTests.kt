@@ -1,4 +1,4 @@
-package com.levi.rappiavaliator
+package com.levi.rappievaluator
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(SpringRunner::class)
 @SpringBootTest
-class RappiAvaliatorApplicationTests {
+class RappiEvaluatorApplicationTests {
 
     @Test
     fun contextLoads() {

@@ -1,11 +1,11 @@
-package com.levi.rappiavaliator.controller
+package com.levi.rappievaluator.controller
 
-import com.levi.rappiavaliator.domain.SuggestedRestaurant
-import com.levi.rappiavaliator.service.SuggestedRestaurantService
+import com.levi.rappievaluator.domain.SuggestedRestaurant
+import com.levi.rappievaluator.service.SuggestedRestaurantService
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/avaliator/suggestedRestaurant")
+@RequestMapping("/evaluator/suggestedRestaurant")
 class SuggestedRestaurantController(private val service: SuggestedRestaurantService) {
 
     @PostMapping

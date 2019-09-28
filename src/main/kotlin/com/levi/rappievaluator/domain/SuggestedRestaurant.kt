@@ -1,4 +1,4 @@
-package com.levi.rappiavaliator.domain
+package com.levi.rappievaluator.domain
 
 import com.datastax.driver.core.utils.UUIDs
 import org.springframework.data.cassandra.core.mapping.Column

@@ -1,1 +1,1 @@
-rootProject.name = "rappi-avaliator"
+rootProject.name = "rappi-evaluator"

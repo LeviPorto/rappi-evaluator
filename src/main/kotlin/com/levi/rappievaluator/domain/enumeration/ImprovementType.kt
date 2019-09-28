@@ -1,4 +1,4 @@
-package com.levi.rappiavaliator.domain.enumeration
+package com.levi.rappievaluator.domain.enumeration
 
 enum class ImprovementType {
     DELIVERY_TIME, ATTENDANCE

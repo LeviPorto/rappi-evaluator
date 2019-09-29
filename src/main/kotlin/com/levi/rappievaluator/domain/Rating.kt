@@ -4,6 +4,7 @@ import com.datastax.driver.core.utils.UUIDs
 import com.levi.rappievaluator.domain.enumeration.ImprovementType
 import com.levi.rappievaluator.domain.enumeration.RangeTime
 import org.springframework.data.cassandra.core.mapping.Column
+import org.springframework.data.cassandra.core.mapping.Indexed
 import org.springframework.data.cassandra.core.mapping.PrimaryKey
 import org.springframework.data.cassandra.core.mapping.Table
 import java.time.Instant
@@ -13,7 +14,7 @@ import java.util.*
 class Rating(
         @PrimaryKey val id: UUID = UUIDs.timeBased(),
         @Column val value: Double,
-        @Column val restaurantId: Int,
+        @Indexed @Column val restaurantId: Int,
         @Column val orderId: Int,
         @Column val userId: Int,
         @Column val comment: String,

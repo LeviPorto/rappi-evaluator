@@ -1,6 +1,6 @@
 package com.levi.rappievaluator.config
 
-import com.levi.rappievaluator.dto.AvaliatedRestaurantDTO
+import com.levi.rappievaluator.dto.EvaluatedRestaurantDTO
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.common.serialization.StringSerializer
 import org.springframework.beans.factory.annotation.Value
@@ -29,12 +29,12 @@ class KafkaProducerConfiguration {
     }
 
     @Bean
-    fun producerFactory(): ProducerFactory<String, AvaliatedRestaurantDTO> {
+    fun producerFactory(): ProducerFactory<String, EvaluatedRestaurantDTO> {
         return DefaultKafkaProducerFactory(producerConfigs())
     }
 
     @Bean
-    fun kafkaTemplate(): KafkaTemplate<String, AvaliatedRestaurantDTO> {
+    fun kafkaTemplate(): KafkaTemplate<String, EvaluatedRestaurantDTO> {
         return KafkaTemplate(producerFactory())
     }
 }

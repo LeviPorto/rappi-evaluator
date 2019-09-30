@@ -1,7 +1,7 @@
 package com.levi.rappievaluator.service
 
 import com.levi.rappievaluator.domain.Rating
-import com.levi.rappievaluator.dto.AvaliatedRestaurantDTO
+import com.levi.rappievaluator.dto.EvaluatedRestaurantDTO
 import com.levi.rappievaluator.dto.RatingDTO
 import com.levi.rappievaluator.dto.UnitAverageDTO
 import com.levi.rappievaluator.publisher.RatingPublisher
@@ -19,7 +19,7 @@ class EvaluationProcessorService(private val cachedService: CachedEvaluationProc
             calculateCachedAverageRestaurantRatings(rating, cachedRestaurantAverageRating)
         }
 
-        ratingPublisher.sendRatingToTopic(AvaliatedRestaurantDTO(rating.restaurantId, calculatedRating, calculatedRating > 4.5))
+        ratingPublisher.sendRatingToTopic(EvaluatedRestaurantDTO(rating.restaurantId, calculatedRating, calculatedRating > 4.5))
     }
 
     fun calculateAverageRestaurantRatings(rating: Rating, restaurantRatings: List<RatingDTO>): Double {

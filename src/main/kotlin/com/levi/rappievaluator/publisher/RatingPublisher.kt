@@ -1,6 +1,6 @@
 package com.levi.rappievaluator.publisher
 
-import com.levi.rappievaluator.dto.AvaliatedRestaurantDTO
+import com.levi.rappievaluator.dto.EvaluatedRestaurantDTO
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.kafka.support.KafkaHeaders
@@ -9,15 +9,15 @@ import org.springframework.stereotype.Component
 import java.text.ParseException
 
 @Component
-class RatingPublisher(private val kafkaTemplate: KafkaTemplate<String, AvaliatedRestaurantDTO>) {
+class RatingPublisher(private val kafkaTemplate: KafkaTemplate<String, EvaluatedRestaurantDTO>) {
 
     @Value("\${spring.kafka.topic.rating}")
     var topicRating: String? = null
 
     @Throws(ParseException::class)
-    fun sendRatingToTopic(avaliatedRestaurantDTO: AvaliatedRestaurantDTO) {
+    fun sendRatingToTopic(evaluatedRestaurantDTO: EvaluatedRestaurantDTO) {
         val message = MessageBuilder
-                .withPayload(avaliatedRestaurantDTO)
+                .withPayload(evaluatedRestaurantDTO)
                 .setHeader(KafkaHeaders.TOPIC, topicRating)
                 .build()
         kafkaTemplate.send(message)

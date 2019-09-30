@@ -1,6 +1,6 @@
 package com.levi.rappievaluator.dto
 
-class AvaliatedRestaurantDTO(
+class EvaluatedRestaurantDTO(
         val restaurantId: Int,
         val rating: Double,
         val isSuperRestaurant: Boolean

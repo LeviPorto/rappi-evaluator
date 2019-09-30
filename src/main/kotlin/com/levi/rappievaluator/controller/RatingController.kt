@@ -11,6 +11,6 @@ class RatingController(private val service: RatingService) {
     @PostMapping
     fun create(@RequestBody rating: Rating): Rating = service.create(rating)
 
-    @GetMapping
+    @GetMapping("/restaurant/{restaurantId}")
     fun findByRestaurant(@PathVariable restaurantId : Int) = service.retrieveByRestaurant(restaurantId)
 }

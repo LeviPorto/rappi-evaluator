@@ -16,7 +16,7 @@ import java.util.HashMap
 class KafkaProducerConfiguration {
 
     @Value("\${spring.kafka.bootstrap-servers}")
-    var bootstrapServer: String? = null
+    val bootstrapServer: String? = null
 
     @Bean
     fun producerConfigs(): Map<String, Any> {

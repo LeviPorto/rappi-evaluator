@@ -7,5 +7,7 @@ import java.util.*
 
 @Repository
 interface RatingRepository : CassandraRepository<Rating, UUID> {
+
     fun findByRestaurantId(restaurantId: Int): List<Rating>
+
 }

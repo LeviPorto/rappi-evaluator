@@ -26,13 +26,4 @@ class RatingDTO(
         return true
     }
 
-    override fun hashCode(): Int {
-        var result = id.hashCode()
-        result = 31 * result + value.hashCode()
-        result = 31 * result + restaurantId
-        result = 31 * result + userDTO.hashCode()
-        result = 31 * result + comment.hashCode()
-        result = 31 * result + date.hashCode()
-        return result
-    }
 }
